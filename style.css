@@ -1,0 +1,545 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-family: "Bungee Spice", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 95%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .text-box {
+  height: 15%;
+  background-color: #323232;
+  flex-direction: column;
+}
+
+.text-box p {
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 100;
+}
+
+.special {
+  height: 8%;
+  background-color: #000;
+  font-size: 2rem;
+  z-index: 9;
+}
+
+.container .main {
+  height: 40%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.center-line {
+  width: 2px;
+  height: 90%;
+  background-image: linear-gradient(#d22a00, #f09f00, #d22a00);
+  justify-content: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  height: 29%;
+  /* background-color: purple; */
+}
+
+.bottom .btn-box {
+  width: 100%;
+  height: 65%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.bottom .reset_box {
+  height: 35%;
+  background-color: #000;
+}
+
+.btn {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 3px solid #ffa500;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px #ff5500;
+}
+
+.btn:hover {
+  background-color: #222;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ffa500, 0 0 10px #ff7f00 inset;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px #ff5500 inset;
+}
+
+#btn1 {
+  background-image: url("./assets/h_rock2.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#btn2 {
+  background-image: url("./assets/h_paper.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#btn3 {
+  background-image: url("./assets/h_sccisor.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#resetBtn {
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffa500;
+  background-color: #111;
+  border: 2px solid #ffa500;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px #ff4500;
+}
+
+#resetBtn:hover {
+  background-color: #222;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ffa500, 0 0 10px #ff7f00 inset;
+}
+
+#resetBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px #ff5500 inset;
+}
+
+/* --------------------------andr ki design------------ */
+
+.human-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 30%;
+  gap: 1.5rem;
+}
+
+.humanScore {
+  height: 3rem;
+  width: 3rem;
+  background-color: #06923e;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 100;
+}
+
+.humanIntro {
+  font-size: 2rem;
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 100;
+}
+
+.human_actionPacket,
+.ai_actionPacket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.humanAction {
+  border-radius: 50%;
+  border-bottom: 3px solid #fffefeb9;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px #ffffff;
+  height: 3.5rem;
+  width: 3.5rem;
+
+  z-index: 11;
+
+  /* background-color: red; */
+  background-image: url("./assets/h_rock2.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+/* ------------------------ai side----------------- */
+
+.ai-side {
+  /* background-color: #fff; */
+  height: 90%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.aiScore {
+  height: 3rem;
+  width: 3rem;
+  background-color: #ff3f33;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 100;
+}
+
+.aiIntro {
+  font-size: 2rem;
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 100;
+}
+
+.aiAction {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border-bottom: 3px solid #fffefeb9;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px #ffffff;
+  height: 3.5rem;
+  width: 3.5rem;
+  /* background-color: red; */
+  background-image: url("./assets/ai_rock.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+/* ----------------white line--------------- */
+
+.white-line {
+  height: 1px;
+  background-color: #fff;
+}
+
+#result {
+  border-bottom: 1px solid #fff;
+  width: 40%;
+  margin: auto;
+}
+
+/* ------------------mobile media queries----------- */
+
+@media (max-width: 480px) {
+  .container .text-box {
+    height: 15vh;
+  }
+
+  .text-box h1 {
+    font-size: 1.2rem;
+  }
+
+  .text-box p {
+    font-size: 0.8rem;
+  }
+
+  .special {
+    font-size: 1.1rem;
+    height: 5vh;
+    margin-top: 0.3rem;
+  }
+
+  .main {
+    height: 40vh;
+  }
+
+  .human-side,
+  .ai-side {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .humanScore,
+  .aiScore {
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .humanIntro,
+  .aiIntro {
+    font-size: 1rem;
+  }
+
+  .humanAction,
+  .aiAction {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .human_actionPacket p,
+  .ai_actionPacket P {
+    font-size: 0.7rem;
+  }
+
+  .bottom {
+    height: 35vh;
+  }
+
+  .reset_box {
+    height: 10vh;
+  }
+
+  .btn {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  #resetBtn {
+    padding: 0.4rem 1.5rem;
+    font-size: 1rem;
+    color: #ffa500;
+    cursor: pointer;
+  }
+}
+
+/* --------------------tablet media queries--------------- */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .text-box h1 {
+    font-size: 1.7rem;
+  }
+
+  .special {
+    font-size: 1.3rem;
+    height: 5vh;
+    margin-top: 0.3rem;
+  }
+
+  .human-side,
+  .ai-side {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .humanScore,
+  .aiScore {
+    height: 1.8rem;
+    width: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .humanIntro,
+  .aiIntro {
+    font-size: 1.5rem;
+  }
+
+  .humanAction,
+  .aiAction {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .human_actionPacket p,
+  .ai_actionPacket P {
+    font-size: 0.8rem;
+  }
+
+  .bottom {
+    height: 35vh;
+  }
+
+  .reset_box {
+    height: 10vh;
+  }
+
+  .btn {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  #resetBtn {
+    padding: 0.4rem 1.5rem;
+    font-size: 1rem;
+    color: #ffa500;
+    cursor: pointer;
+  }
+}
+
+/*
+
+
+/* --------------------laptop media queries--------------- */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .special {
+    font-size: 1.6rem;
+    height: 5vh;
+    margin-top: 0.5rem;
+  }
+
+  .human-side,
+  .ai-side {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .humanScore,
+  .aiScore {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.7rem;
+  }
+
+  .humanIntro,
+  .aiIntro {
+    font-size: 1.7rem;
+  }
+
+  .humanAction,
+  .aiAction {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .human_actionPacket p,
+  .ai_actionPacket P {
+    font-size: 1rem;
+  }
+
+  .bottom {
+    height: 35vh;
+  }
+
+  .reset_box {
+    height: 10vh;
+  }
+
+  .btn {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+  
+  #resetBtn {
+    padding: 0.4rem 1.5rem;
+    font-size: 1rem;
+    color: #FFA500;
+    cursor: pointer;
+    font-weight: bold;
+    } 
+ }
+      
+ 
+ 
+ 
+ 
+ /* ---------------------badelaptop------------- */
+ @media (min-width: 1025px) and (max-width: 1440px) {
+   .text-box h1 {
+     font-size: 1.8rem;
+   }
+ 
+   .special {
+     font-size: 1.6rem;
+     height: 5vh;
+     margin-top: 0.5rem;
+   }
+ 
+   .human-side,
+   .ai-side {
+     display: flex;
+     gap: 0.6rem;
+   }
+ 
+   .humanScore,
+   .aiScore {
+     height: 2rem;
+     width: 2rem;
+     font-size: 1.7rem;
+   }
+ 
+   .humanIntro,
+   .aiIntro {
+     font-size: 1.7rem;
+   }
+ 
+   .humanAction,
+   .aiAction {
+     height: 3rem;
+     width: 3rem;
+   }
+ 
+   .human_actionPacket p,
+   .ai_actionPacket P {
+     font-size: 1rem;
+   }
+ 
+   .bottom {
+     height: 35vh;
+   }
+ 
+   .reset_box {
+     height: 10vh;
+   }
+ 
+   .btn {
+     height: 3.8rem;
+     width: 3.8rem;
+   }
+   
+   #resetBtn {
+     padding: 0.4rem 1.5rem;
+     font-size: 1rem;
+     color: #FFA500;
+     cursor: pointer;
+     font-weight: bold;
+     } 
+  }
