@@ -17,7 +17,7 @@ Play against the computer, keep score, and enjoy cool button effects with hand e
 
 ## 🖼️ Preview
 
-> *(Add screenshot here after uploading)*  
+> *(./assets/game.png)*  
 You can add a screenshot of your game here to showcase the UI.
 
 ---
@@ -55,7 +55,7 @@ Thanks to open-source image providers & emoji libraries for making the UI intera
 
 ## 📌 Author
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Roshan Pal]
 
 ---
 
