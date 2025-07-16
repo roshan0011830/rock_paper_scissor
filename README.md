@@ -17,8 +17,9 @@ Play against the computer, keep score, and enjoy cool button effects with hand e
 
 ## 🖼️ Preview
 
-> *(./assets/game.png)*  
+> *(game screenshot)*  
 You can add a screenshot of your game here to showcase the UI.
+> ![Game screenshot].(./assets/game.png)
 
 ---
 
