@@ -272,6 +272,8 @@ body {
   margin: auto;
 }
 
+
+
 /* ------------------mobile media queries----------- */
 
 @media (max-width: 480px) {
@@ -317,8 +319,9 @@ body {
 
   .humanAction,
   .aiAction {
-    height: 2.5rem;
-    width: 2.5rem;
+    margin-top: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
   }
 
   .human_actionPacket p,
@@ -337,6 +340,10 @@ body {
   .btn {
     height: 3rem;
     width: 3rem;
+  }
+
+  .btn:active {
+    box-shadow: 0 0 2px #ff5500 inset;
   }
 
   #resetBtn {
