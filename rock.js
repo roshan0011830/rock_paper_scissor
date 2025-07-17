@@ -1,4 +1,4 @@
-console.log("welcome to rock paper scissor-------->");
+console.log("welcome to rock paper scissor game-------->");
 
 let rockBtn = document.getElementById("btn1");
 let paperBtn = document.getElementById("btn2");
